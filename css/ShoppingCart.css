@@ -1,0 +1,538 @@
+/* reset 重置*/
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	max-height: 657px;
+	
+}
+
+ul{
+	list-style:none;
+}
+a{
+	color: #000000;
+	text-decoration: none;/* 清除a标签默认下划线样式 */
+}
+/* basic基本 */
+
+.container{
+	width: 1226px;
+	margin: 0 auto;
+}
+
+
+.clearfix::after{
+	display: block;
+	content: "";
+	clear: both;
+	
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.bor{
+
+}
+
+/* page */
+/* header */
+.header{
+	font-size: 0px;
+}
+
+.header-logo,
+.header-title,
+.header-title>*{
+	display: inline-block;
+}
+.header-logo,
+.header-title{
+	vertical-align: middle;
+}
+
+.header-title>h2{
+	font-size: 28px;
+	font-weight: 400;
+	margin-top: -2px;
+	padding: 20px 15px 20px 50px;
+}
+.header-title>p{
+    font-size: 12px;
+	color: #757575;
+}
+
+.header-nav{
+	display: inline-block;
+	position: relative;
+}
+
+
+
+/* 顶栏位置site-topbar  */
+
+
+.site-topbar *{
+	font-size: 12px;
+	color: #757575;
+	
+}
+.topbar-info>.user{
+	display: inline-block;
+	margin-top: 30px;
+	position: relative;
+}
+
+.user>.username{
+	text-align: center;
+	display: inline-block;
+	width: 110px;
+	
+}
+
+.user>.username>.icon::after{
+	font-family: "iconfont" !important;
+	font-size: 14px;
+	font-weight: 700;
+	font-style: normal;
+	content: "\e512";
+	margin-left: 10px;
+}
+.username>span.icon{
+	transform: rotate(-30deg);
+}
+.user>a.username:hover>span{
+	color: #ff6700;
+}
+.user>.user-menu-box{
+	position: absolute;
+	left: 1px;
+	top: 30px;
+	background-color: white;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.3s; 
+}
+.user:hover>.user-menu-box{
+	box-shadow:0px 4px 7px 1px #e8e8e8;
+	height: 180px;
+}
+
+
+.user-menu>li{
+	width: 110px;
+	text-align: center;
+	padding: 10px 0px;
+	
+}
+.user-menu>li>a *{
+	color: #000000;
+}
+
+.user-menu>li:hover{
+	background-color: rgba(0,0,0,0.05);
+}
+.user-menu>li:hover>a{
+	color:#ff6700 ;
+}
+.topbar-info>a:hover{
+	color:#ff6700 ;
+}
+.topbar-info>a:last-child{
+	padding: 0px 13px;
+}
+
+/* page-main */
+
+.page-main{
+	background-color: rgba(0,0,0,0.03);
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+/* shoppingCart */
+table{
+	color: #424242;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 20px;
+	background-color: white;
+	border-collapse:collapse;
+}
+
+tbody>tr{
+	border-top: 1px solid gainsboro;
+}
+
+th{
+	font-weight: 400;
+	width: 100px;
+	height: 50px;
+
+}
+td{
+	/* font-weight: 400; */
+	
+}
+
+th:first-child,
+td:first-child{
+	width: 80px;
+	text-align: left;
+	padding-left: 20px;
+}
+input[type="checkbox"]{
+	border-collapse:collapse;
+	/* 设置zoom属性（放大） */
+	zoom: 150%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+
+tr>td:nth-child(2){
+	text-align: left;
+}
+
+td:nth-child(2) img{
+	width: 100px;
+	margin: 20px 0px;
+}
+
+
+tr>th:nth-child(3),
+tr>td:nth-child(3){
+	text-align: left;
+	width: 300px;
+}
+
+tr>th:nth-child(5){
+	width: 200px;
+	
+}
+tr>th:nth-child(6),
+tr>td:nth-child(6){
+	width: 70px;
+	padding-right: 80px;
+}
+td.setquantity{
+	position: relative;
+}
+td.setquantity>input{
+	display: inline-block;
+	text-align: center;
+	width: 70px;
+	padding:0px 60px;
+	height: 40px;
+	outline: none;
+	border: 1px solid gainsboro;
+
+}
+
+
+td.setquantity>.minus{
+	outline: none;
+	border: none;
+	font-size: 18px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-top: 1px;
+	position: absolute;
+	left: 26.5px;
+	background-color:rgba(0,0,0,0);
+	transition:background-color 0.5s;
+}
+td.setquantity>.plus{
+	border: none;
+	font-size: 18px;
+	width: 40px;
+	height: 40px;
+	margin-top: 1px;
+	position: absolute;
+	right: 26.5px;
+	background-color:rgba(0,0,0,0);
+	transition:background-color 0.5s;
+	
+}
+
+td.setquantity>button:hover{
+	background-color:rgba(0,0,0,0.1);
+}
+
+
+
+tr>td:nth-child(6),
+tr>th:nth-child(6){
+	text-align: right;
+}
+tr>td:nth-child(6){
+	color:#ff6700;
+	
+}
+
+th:last-child,
+td:last-child{
+	width: 80px;
+	padding-right: 20px;
+}
+
+input[type="checkbox"],
+tr>td:last-child>span{
+	cursor: pointer;
+}
+.bg-ff6700{
+	background-color:#ff6700 ;
+}
+
+
+tr>td:last-child>span:hover{
+	display: inline-block;
+	color: white;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;/*保证垂直居中  */
+	background-color:#ff6700;
+	border-radius: 25px;
+}
+
+
+/* <!-- 购物车内容条cart-bar-->------------------ */
+.cart-bar{
+	text-align: center;
+	font-size: 14px;
+	color: #757575;
+	height: 50px;
+	line-height: 50px;
+	background-color: white;
+	margin-bottom: 50px;
+	position: relative;
+}
+/* <!-- 左侧部分section-left -->*/
+/*回头购物 */
+.section-left>a{
+	color: #757575;
+	margin-left: 30px;
+}
+
+.section-left>a:hover{
+	color: #ff6700;
+}
+
+/* 购物车内商品总数量cart-total */
+.cart-total>span.Vertical-line{
+	margin:0px 10px 0px 15px;
+	opacity: 0.1;
+}
+
+.cart-total>i,
+.total-price{
+	font-style: normal;
+	color: #ff6700;
+}
+
+/* 总价格 */
+.total-price-box{
+	height: 50px;
+	margin-top: -6px;
+}
+
+.total-price-box>em{
+	font-style: normal;
+	font-size: 24px;
+	
+}
+
+.total-price-box>a{
+	display: inline-block;
+	text-align: center;
+	font-size: 18px;
+	color: #757575;
+	width: 200px;
+	height: 50px;
+	vertical-align: middle;
+	background-color:rgba(0,0,0,0.2) ;
+	opacity: 0.8;
+}
+.total-price-box>.Change-color{
+	color: white;
+	background-color: #ff6700 ;
+}
+/* 未选择商品后的提示文本 */
+.no-select-tip{
+	position: absolute;
+	bottom: 62px;
+	right: 0px;
+	display: inline-block;
+	color: #ff6700;
+	width: 200px;
+	height: 47px;
+	line-height: 47px;
+	border: 1px solid #ff6700;
+	background-color: white;
+	
+	
+}
+.cart-bar div.txtTip{
+	display: none;
+}
+
+
+/* ---<!-- site-footer网站页脚 -->-- */
+.site-footer {
+	text-align: left;
+	height: 330px;
+}
+.bottom-nva ul{
+	height: 83px;
+	border-bottom: 1px solid gainsboro;
+}
+.bottom-nva li {
+	float: left;
+	font-size: 16px;
+	width:242px;
+	text-align: center;
+	line-height: 24px;
+	padding: 27px 0;
+	
+	
+}
+
+.bottom-nva li.Line::after {
+	content: '';
+	height: 24px;
+	border-right: 1px solid rgba(0,0,0,0.1);
+	float: right;
+	
+}
+border-right: 1px solid red;
+.bottom-nva li a {
+	color: #595959;
+}
+.bottom-nva li a:hover{
+	color: #ff6700;
+}
+
+.bottom-nva li i.iconfont {
+	font-size: 24px;
+	margin-right: 5px;
+}
+
+.footer-links {
+	padding-top: 40px;
+	
+}
+
+.footer-links a {
+	color: #757575;
+}
+
+.footer-links>dl {
+	float: left;
+	width: 160px;
+}
+
+.footer-links>dl>dt {
+	margin-bottom: 26px;
+}
+
+.footer-links>dl>dd {
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.footer-links>dl>dd a:hover {
+	color: #ff6700;
+}
+.col-contact{
+	text-align: center;
+	display: inline-block;
+	border-left:1px solid rgba(0,0,0,0.1) ;
+	padding-left: 45px;
+	margin-left: 10px;
+	
+}
+
+.col-contact>p:first-child{
+	font-size: 21px;
+	color: #ff6700;
+}
+.col-contact>p:nth-of-type(2) {
+	margin: 7px 0px;
+	font-size: 12px;
+}
+
+.col-contact>a {
+	font-size: 14px;
+	border: 1px solid #ff6700;
+	background: #fff;
+	color: #ff6700;
+	padding: 2px 25px;
+}
+.follow{
+	font-size: 12px;
+	line-height: 40px;
+}
+.follow>img{
+	width: 20px;
+	vertical-align: middle;
+}
+
+
+
+/* ---<!-- 站点信息 -->---- */
+.site-info {
+	padding-top: 20px;
+	background: #fafafa;
+	margin-top: 20px;
+	
+}
+.site-info>.container{
+	position: relative;
+	line-height: 20px;
+}
+.site-info>div {
+	padding-left: 60px;
+	box-sizing: border-box;
+}
+
+.sites a {
+	color: #757575;
+	font-size: 12px;
+}
+.sites>.sep{
+	color: rgba(0,0,0,0.3);
+}
+.sites1 a,
+.sites1 {
+	color: #c2c2c2;
+	font-size: 12px;
+}
+
+.site-info .logo {
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+    background: url(//s02.mifile.cn/assets/static/image/logo-mi2.png);
+    background-size: 56px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info-links img {
+	height: 28px;
+}
+/* slogan标语 */
+.slogan{
+	text-align: center;
+	color: gainsboro;
+	margin: 20px 0px;
+}

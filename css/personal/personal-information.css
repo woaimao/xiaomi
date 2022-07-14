@@ -1,0 +1,291 @@
+/* reset 重置*/
+*{
+	padding: 0;
+	margin: 0;
+	
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	max-height: 657px;
+	
+}
+
+ul{
+	list-style:none;
+}
+a{
+	color: #000000;
+	text-decoration: none;/* 清除a标签默认下划线样式 */
+}
+/* basic基本 */
+
+.container{
+	width: 1226px;
+	margin: 0 auto;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix::after{
+	display: block;
+	content:"";
+	clear: both;
+	
+}
+
+/* page */
+.box-left{
+	width: 20%;
+	height: 900px;
+	background-image: url("https://cdn.web-global.fds.api.mi-img.com/mcfe--mi-account/static/static/media/banner.4994397e.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	
+	
+}
+
+/* header */
+.header{
+	min-width: 644px;
+	padding: 20px;
+	box-sizing: border-box;
+
+}
+
+.header-logo{
+	display: inline-block;
+
+}
+.header-nav{
+	display: inline-block;
+	position: relative;
+}
+
+.header-logo img,
+.header-logo span,
+.header-nav>ul>li{
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+.header-nav >ul>li{
+	display: inline-block;
+	
+}
+
+.header-logo span{
+	font-size: 23px;
+	font-weight: 600;
+	margin-left: 5px;
+}
+
+.header-nav span{
+	font-size: 14px;
+	color: gray;
+	margin: 0 10px;
+}
+
+.header-nav a:hover>span{
+	color: #ff5c00;
+	
+}
+
+
+
+
+/* 鼠标悬停nav导航栏时的样式 */
+/* 三角旋转 */
+.box-item-list>a>.rotate{
+	margin-left: -8px;
+	display: inline-block;/* 行内元素受行高高度限制，不能旋转；所以加行内快 拥有足够高度才能旋转*/
+	transform: rotate(-180deg);
+	font-size: 12px;
+	transition: all 0.2s;
+	
+}
+.box-item-list>a:hover>.rotate{
+	transform: rotate(0deg);
+	
+}
+
+/* 头部导航位置下拉列表显示效果 */
+.box-item-list{
+	position: relative;
+}
+
+
+.item-list{
+	position: absolute;
+	top: 40px;
+	right: 2px;
+	background-color: white;
+	overflow: hidden;
+	height: 0px;
+	transition: height 0.1s; 
+}
+.box-item-list:hover>.item-list{
+	height: 80px;
+	box-shadow:0px 5px 10px 3px #f0f0f0;
+}
+
+
+.item-list li{
+	text-align: center;
+	display: block;
+	width: 100px;
+}
+.item-list li:hover{
+	background-color:#fff3e6;
+}
+.item-list a:hover>span{
+	color: black;
+}
+
+
+
+
+/* ----------<!-- main-content主内容区域 -->------------ */
+.main-content{
+	max-width: 1440px;
+	margin: 20px auto;
+	padding: 0 80px;
+	position: relative;
+}
+
+
+/* <!-- layout-sidebar侧栏布局--> */
+.layout-sidebar{
+	position: absolute;
+	width: 260px;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: 0 20px 50px 6px hsla(0,0%,63.5%,.1);
+	border-radius: 4px;
+
+}
+/* profile-box简况盒子 */
+.profile-box{
+	font-size: 19px;
+	font-weight: 600;
+	color: #333;
+	text-align: center;
+	height: 245px;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	background-image: url("https://cdn.web-global.fds.api.mi-img.com/mcfe--mi-account/static/static/media/background.75b99c80.png");
+	background-size: cover;
+}
+
+.profile-box>img{
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	
+}
+
+.profile-box>.nickname{
+	margin: 10px 0px;
+}
+/* function-menu功能菜单 */
+.function-menu {
+	margin-top: 20px;
+}
+.function-menu li{
+	height: 60px;
+	line-height: 60px;
+	font-size: 17px;
+	font-weight: 600;
+	color: #333;
+	padding-left: 70px;
+	border-left: 5px solid white;
+}
+
+.function-menu li:hover{
+	background-color:#fff3e6;
+	border-left: 5px solid #ff5c00;
+}
+
+.layout-sidebar,
+.layout-content{
+	display: inline-block;
+}
+
+
+
+/* <!-- layout-content内容布局 --> */
+.layout-content{
+	position: relative;
+	width: 75%;
+	min-width: 600px;
+	margin-left: 280px;
+	background-color: #fff;
+	box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.03);
+	padding:20px 0px 80px 10px;
+}
+
+/* title-box标题 */
+.content-box>.title{
+	font-size: 19px;
+	font-weight: 600;
+	color: #333;
+	padding-left: 5px;
+	margin-bottom: 41px;
+	border-left: 3px solid black;
+}
+
+
+/* form表单 */
+.information-list li{
+	font-size: 17px;
+	margin-bottom: 60px;
+
+	
+}
+.information-list li>.label{
+	display: inline-block;
+	text-align: right;
+	width: 110px;
+	margin-right:40px;
+	
+}
+.information-list li:first-child>img{
+	width: 60px;
+	height: 60px;
+	border-radius: 40px;
+	vertical-align: middle;
+	margin-left: -25px;
+}
+
+.information-list li:first-child>img{
+	
+}
+.information-list li>.see{
+	color:rgb(255, 92, 0);
+}
+.information-list li:last-child>.btn{
+	font-size: 18px;
+	line-height: 60px;
+	text-align: center;;
+	color: #fff;
+	width: 300px;
+	margin-left: 130px;
+	background-color: #ff5c00;
+	border-radius: 5px;
+}
+
+/* ---<!-- mi-copyright小米版权 -->------- */
+.mi-copyright{
+	/* 容器居中 */
+	margin: 0 auto;
+	text-align: center;/* 文本居中 */
+	color: #999;
+	font-size: 12px;
+}
+.mi-copyright>a{
+	color: #999;
+}

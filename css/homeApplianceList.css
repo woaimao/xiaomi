@@ -1,0 +1,132 @@
+/* reset 重置*/
+*{
+	padding: 0;
+	margin: 0;
+	margin:  0 auto;
+}
+ul{
+	list-style: none;/*清除列表默认样式 */
+}
+a{
+	color: #000000;
+	text-decoration: none;/* 清除a标签默认下划线样式 */
+}
+
+/* basic基本 */
+.container{
+	width: 1226px;
+	margin: 0 auto;
+}
+
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix::after{
+	display: block;
+	content: "";
+	clear: both;
+	
+}
+
+body{
+	min-width: 1226px;
+}
+/* page版心 */
+.site-banner{
+	text-align: center;
+	height: 800px;
+	background-color: rgb(122, 220, 195);
+	background-image: url('//cdn.cnbj1.fds.api.mi-img.com/mi-mall/a8d9fa5533021ed722ec42c8c12690dc.jpg?w=5120&h=1600&bg=7ADCC3');
+	background-repeat: no-repeat;
+	background-position:top center;
+	background-size: 2560px 800px;
+}
+
+.site-main{
+	background: rgb(96, 213, 187);
+}
+
+.main{
+	font-size: 0px;
+}
+.main li{
+	height: 462px;
+	width: 400px;
+	background-color: white;
+	display: inline-block;
+	
+}
+.main li:nth-child(3n+2){
+	margin:13px;
+}
+
+li>a.item-img{
+	display: block;
+	height: 266px;
+	width: 400px;
+	overflow: hidden;
+	background: #e6e6e6;
+	
+}
+li>a.item-img>img{
+	width: 400px;
+	transition: all 1s;
+}
+li>a.item-img:hover>img{
+	transform: scale(1.1);
+}
+
+li>.item-text{
+	text-align: center;
+	line-height: 30px;
+}
+.item-text>a:first-child{
+	font-weight: 400;
+	font-size: 22px;
+	margin-top: 25px;
+	display: block;
+	color: #242424;
+}
+.item-text>a:last-child{
+	display: inline-block;
+	font-size: 18px;
+	color: white;
+	padding: 10px 40px;
+	background-color: rgb(234, 98, 91) ;
+}
+
+.item-text>p{
+	font-size: 14px;
+	color: #666;
+}
+
+p.price>sup:nth-child(1){
+	vertical-align: baseline;
+	margin-right: -5px;
+	font-size: 20px;
+	
+}
+p.price>span:nth-child(2){
+	font-size: 24px;
+	color: rgb(234, 98, 91);
+}
+p.price>del{
+	font-size: 14px;
+	color: #666;
+}
+p.price>del>sup{
+	font-size: 10px;
+	vertical-align: baseline;
+	margin-right: -5px;
+	color: #666;
+}
+.promo{
+	font-size: 50px;
+	line-height: 120px;
+	font-weight:600;
+	color: white;
+	text-align: center;
+}

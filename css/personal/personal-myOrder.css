@@ -1,0 +1,869 @@
+/* reset */
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+/* basic基本 */
+.container{
+	width: 1226px;
+	margin: 0 auto;
+}
+.bor{
+	border: 1px solid red;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix::after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+
+
+
+/* page版心 */
+
+/* 顶栏位置 */
+.site-topbar{
+	line-height: 40px;
+	font-size: 12px;
+	background-color: #333333;
+}
+.site-topbar a{
+	color: #CCCCCC;
+}
+.topnav,
+.topnav>li,
+.topbar-info,
+.topbar-cart{
+	display: inline-block;
+	
+}
+.topnav span,
+.topbar-info span{
+	margin: 6px;
+	color: #414141;
+	
+}
+.topbar-info{
+	margin-left: 140px;
+}
+/* 顶栏购物车 */
+.topbar-cart{
+	padding:0px 10px;
+	background-color: rgba(255,255,255,0.2);
+	position: relative;
+	transition: all; 
+}
+.cart>img{
+	width: 20px;
+	vertical-align: middle;
+	color: #CCCCCC;
+	
+}
+
+.topbar-cart:hover{
+	background-color: white;
+}
+.topbar-cart:hover a{
+	color: #ff6700;
+}
+.tips-txt{
+	text-align: center;
+	line-height: 100px;
+	width: 300px;
+	position: absolute;
+	overflow: hidden;
+	height: 0px;
+	right: 0px;
+	box-shadow:0px 2px 5px 0.1px #dcdcdc;
+	background-color: white;
+	transition: height 0.3s;
+	z-index: 2;
+
+}
+.tips-txt p{
+	vertical-align: middle;
+}
+.topbar-cart:hover .tips-txt{
+	height: 100px;
+	
+	
+}
+/* 头部位置 */
+.site-header{
+	font-size: 0px;
+	position: relative;
+}
+/* 头部导航宽度*/
+.header-nav{
+width:860px;
+}
+.header-logo,
+.header-nav,
+.item-content li{
+	display: inline-block;
+	
+}
+/* 头部logo */
+.header-logo>a>img{
+	padding: 20px 0px;
+}
+
+/* 导航列表 */
+/* 导航项目 */
+.nav-list>li{
+	display: inline-block;
+	
+}
+/* 项目标题 */
+.nav-list>li{
+	padding: 20px 14px;
+}
+
+.nav-list>li a{
+	display: inline-block;
+}
+.nav-list>li span{
+	line-height: 60px;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+/* 导航类别列表 */
+.nav-list>.nav-category{
+	position: relative;
+	
+}
+
+
+li.nav-category>.site-category{
+	display: none;
+}
+li.nav-category:hover>.site-category{
+	display: block;
+}
+
+/* 类别位置 */
+.site-category{
+	position: absolute;
+	left: -118px;
+	top: 100px;
+	z-index: 2;
+}
+/* 类别列表 */
+.category-list{
+	/* border: 1px solid red; */
+	width: 234px;
+	padding-top:20px;
+	padding-bottom: 20px;
+	display: inline-block;
+	border: 1px solid  #ff6700;
+	background-color: white;
+}
+.category-list >li{
+	padding: 10px 30px;
+	font-size: 16px;
+	
+}
+.category-list>li:hover{
+	background-color: #ff6700;
+}
+.category-list>li:hover>a{
+	color: white;
+}
+
+.category-list>li::after{
+	font-family: "iconfont" !important;
+	font-size: 14px;
+	color: white;
+	font-weight: 700;
+	font-style: normal;
+	content: "\e512";
+	float: right;
+	margin-top: 2.5px;
+	margin-right: -12px;
+
+	
+}
+
+
+/* 类别列表-列表内容 */
+.category-list .item-list{
+	color: #000000;
+	position: absolute;
+	top: 0px;
+	left: 236px;
+	/* 浮动菜单列内容快纵向排列表 */
+	writing-mode: vertical-lr;
+	writing-mode: tb-lr;
+	display: none;
+}
+
+.category-list>li:hover .item-list{
+	z-index: 1;
+	display: block;
+}
+
+.category-item .item-list>ul{
+	font-size: 0;
+}
+
+.category-item .item-list li{
+	display: inline-block;
+	width: calc(992px / 4);
+	height:calc(448px / 6);
+	background-color: #fff;
+	/* 浮动菜单列内容快内容横向排列表 */
+	writing-mode: horizontal-tb;
+}
+.category-item .item-list li *{
+	vertical-align: middle;
+	
+}
+
+/* 设置鼠标移动到导航项目时的效果 */
+li.nav-item>a>span:hover{
+	color: #ff6700;
+	
+}
+.ff6700{
+	color: #ff6700;
+}
+
+
+/* 下拉列表背景面板 */
+.white-panel{
+	position: absolute;
+	left: 0px;
+	top: 80px;
+	width: 100%;
+	height: 0px;
+	
+	margin-top: 20px;
+	background-color: white;
+	overflow: hidden;/*超出范围消失 */
+	transition: height 0.3s;
+	z-index: 3;
+	
+}
+.white-panelHeight{
+	border-top: 1px solid gainsboro;
+	box-shadow:0px 2px 4px 0.1px rgba(0,0,0,0.05);
+	height: 240px;
+}
+/* 项目内容隐藏显示 */
+li.nav-item .item-content{
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 0px;
+	margin-top: 20px;
+	overflow: hidden;/*超出范围消失 */
+	transition: height 0.3s;
+	z-index: 3;
+}
+
+li.nav-item .item-contentHeight{
+	height: 240px;
+	
+}
+li.nav-item .item-content{
+	text-align: center;
+}
+
+li.nav-item .item-content ul{
+	padding-top: 40px;
+	display: none;
+}
+
+.content-list img{
+	width: 160px;
+	padding: 0 20px;
+	border-left: 1px solid #CCCCCC;
+}
+.content-list>.first img{
+	border-left:none ;
+
+}
+.content-list .title{
+	font-size: 12px;
+	color: #333;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+.content-list .price{
+	font-size: 12px;
+	color: #ff6700;
+}
+
+
+/* 搜素框 */
+.header-search{
+	padding: 26px 0px;
+	display: inline-block;
+}
+
+.header-search input{
+	width: 205px;
+	padding: 15px;
+	padding-right: 50px;
+	margin-right: 1px;
+	vertical-align: middle;
+	outline: none;
+	border: 1px solid #CCCCCC;
+	
+}
+/* 搜索图标 */
+.header-search .icon-icon{
+	font-size: 25px;
+	color: gray;
+	padding: 11px;
+	vertical-align: middle;
+	display: inline-block;
+	border:none;
+	border-left:1px solid #CCCCCC;
+	margin-left: -49px;
+	
+}
+
+
+.header-search span:hover{
+	cursor: pointer;
+	color: white;
+	background-color: #ff6700;
+}
+
+/* 行标题 */
+.row-title{
+	font-size: 12px;
+	line-height: 40px;
+	background-color: rgba(0,0,0,0.03);
+}
+.row-title a:hover{
+	color: #ff6700;
+}
+
+/* 主页面page-main  */
+.page-main{
+	background-color: rgba(0,0,0,0.03);
+	padding-bottom: 40px;
+}
+
+
+
+
+/* 左侧栏sidebar-left */
+.page-main{
+	font-size: 0px;
+}
+
+.page-main div.sidebar-left{
+	display: inline-block;
+	width:234px;
+	background: #fff;
+}
+/* 用户地址菜单user-address-menu */
+.user-address-menu {
+    padding: 36px 0;
+}
+.user-address-menu .menu-box {
+    margin: 0 48px 12px;
+}
+.user-address-menu li{
+    padding: 6px 0;
+}
+.user-address-menu>.menu-box>h3.title{
+	font-size: 16px;
+	font-weight:400;
+	line-height: 52px;
+}
+.user-address-menu li a {
+	font-size: 14px;
+    color: #757575;
+}
+.user-address-menu li a:hover{
+	color: black;
+}
+
+
+
+
+/* <!-- 主内容Main content --> */
+.main-content{
+	display: inline-block;
+	padding: 36px 48px;
+	margin-left: 14px;
+	background-color: white;
+	vertical-align: top;
+	
+}
+
+.main-content,
+.box-bottom li,
+.user-card,
+.user-card>h2,
+.user-actions{
+	display: inline-block;
+}
+
+/* <!-- MypersonalCenter-box盒子 --> */
+.MypersonalCenter-box{
+	font-size: 14px;
+	width: 882px;
+}
+
+/* 用户卡片user-card  */
+.user-card{
+	position: relative;
+	width: 302px;
+	height: 160px;
+	margin-top: 20px;
+	padding: 20px 0px 30px 180px;
+	
+}
+.user-card img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 4px;
+	border: 1px solid #e0e0e0;
+	border-radius: 150px;
+	
+}
+.user-card h2{
+	font-size: 24px;
+	font-weight: 400;
+	color: #616161;
+	margin: 0 0 10px;
+	color: #b0b0b0;
+}
+
+.user-card p.tip{
+	margin: 0 0 10px;
+	color: #b0b0b0;
+}
+.user-card a{
+	font-size: 12px;
+	color: #ff6700;
+}
+
+/*用户操作user-actions */
+.user-actions li{
+	padding: 6px 0px;
+	color: #757575;
+}
+.user-actions li:first-child>span{
+	color: #ffac13;
+}
+/*盒子-下 */
+.box-bottom{
+	color: #757575;
+	border-top: 1px solid gainsboro;
+	padding-bottom: 50px;
+}
+
+.box-bottom li{
+	/* border: 1px solid red; */
+	position: relative;
+	width:276px;
+	padding: 28px 0px 29px;
+	padding-left: 120px;
+	margin-top: 50px;
+}
+
+.box-bottom li>img{
+	position: absolute;
+	left: 0px;
+	top: 0;
+}
+.box-bottom li>h3{
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 2px;
+}
+.box-bottom li>h3>span{
+	color: #ff6700;
+}
+.box-bottom li>a{
+	color: #757575;
+}
+.box-bottom li>a:hover{
+	color: #ff6700;
+}
+.box-bottom li>a::after{
+	font-family: "iconfont" !important;
+	font-size: 14px;
+	font-weight: 700;
+	font-style: normal;
+	content: "\e512";
+	margin-left: -10px;
+	
+}
+
+
+
+/* <!-- Myorder-box盒子 --> */
+.control{
+	font-size: 14px;
+	width: 882px;
+}
+/* 标题 */
+.control h1{
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 68px;
+	color: #757575;
+}
+
+.control>h1>small,
+.control>h1>small>a{
+	font-size: 12px;
+	color: #757575;
+	line-height: 1.5;
+}
+
+/* optionsr-list订单列表 */
+.optionsr-list{
+	display: inline-block;
+	line-height: 40px;
+}
+
+.optionsr-list>li{
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1.25;
+	padding-right: 20px;
+	margin-right: 16px;
+	border-right: 0.5px solid rgba(0,0,0,0.1);
+}
+
+
+
+.optionsr-list>li>a{
+	color: #757575;
+}
+
+.optionsr-list>li:first-child>a{
+	color: #ff6700;
+}
+
+/* 搜素框 */
+.optionsr-search{
+	margin-top: -2.5px;
+}
+
+.optionsr-search input{
+	width: 205px;
+	line-height: 40px;
+	padding:0px 60px 0px 15px;
+	vertical-align: middle;
+	outline: none;
+	border: 1px solid #CCCCCC;
+	
+}
+/* 搜索图标 */
+.optionsr-search .icon-icon{
+	font-size: 25px;
+	color: gray;
+	padding: 7.5px 9px;
+	line-height: 40px;
+	margin-left: -48px;
+	vertical-align: middle;
+	border-left:1px solid #CCCCCC;
+	cursor: pointer;
+}
+
+
+/* order-content订单内容 */
+.order-content{
+	text-align: center;
+	margin-top: 50px;
+}
+.order-content>.content{
+	margin: 10px 0px;
+}
+.order-content>.content>p{
+	font-size: 18px;
+	color: #b0b0b0;
+	
+}
+
+
+
+/* order-list订单列表 */
+.order-list-box{
+	padding: 20px 20;
+	border: 1px solid red;
+}
+.order-detail .order-status{
+	padding: 20px 20px 0;
+	font-size: 18px;
+	color: #ff6700;
+	background-color: #fffaf7;
+}
+
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	
+}
+
+
+
+th{
+	font-weight: 400;
+	text-align: left;
+	color: #757575;
+	padding-bottom: 10px;
+	background-color: #fffaf7;
+	padding: 0px 25px 20px;
+}
+th a{
+	color: #757575;
+}
+th:last-child .num{
+	font-size: 28px;
+	font-weight: 500;
+	color: #333;
+}
+th:nth-child(2),td:nth-child(2){
+	text-align: right;
+}
+
+tbody{
+	border-top: 1px solid #feccac;
+}
+tbody td{
+	padding: 25px;
+	
+}
+.goods-list>li>div,
+.goods-list>li>p:nth-child(2){
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+.goods-list .figure img{
+	width: 91px;
+	height: 91px;
+}
+
+/* order-actions订单行为 */
+.order-actions{
+	vertical-align: top;
+}
+
+.order-actions .btn-payment{
+	background: #ff6700;
+	border: 1px solid #ff6700;
+	color: #fff;
+	transition: background-color 0.3s; 
+}
+.order-actions .btn-payment:hover{
+	background: #da5300;
+}
+.order-actions .btn-line-gray,
+.order-actions .btn-contract{
+	border: 1px solid #b0b0b0;
+	background: #fff;
+	color: #757575;
+}
+.btn{
+	display: inline-block;
+	text-align: center;
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+	margin-bottom: 10px;
+	
+}
+
+/* <!-- 页面导航图标 --> */
+
+.pagenav{
+	text-align: center;
+	margin-top: 40px;
+}
+.pagenav>div{
+	display: inline-block;
+}
+.bg-grey{
+	padding:5px 20px;
+	margin: 0 20px;
+	color: white;
+	background-color:gray;
+}
+.pagenav>div:first-child{
+	transform: rotate(-180deg);
+}
+.pagenav .icon-dayu{
+	font-size: 20px;
+	color: darkgray;
+}
+
+/* ---<!-- site-footer网站页脚 -->-- */
+.site-footer {
+	text-align: left;
+	height: 330px;
+}
+.bottom-nva ul{
+	height: 83px;
+	border-bottom: 1px solid gainsboro;
+}
+.bottom-nva li {
+	float: left;
+	font-size: 16px;
+	width:242px;
+	text-align: center;
+	line-height: 24px;
+	padding: 27px 0;
+	
+	
+}
+
+.bottom-nva li.Line::after {
+	content: '';
+	height: 24px;
+	border-right: 1px solid rgba(0,0,0,0.1);
+	float: right;
+	
+}
+
+.bottom-nva li a {
+	color: #595959;
+}
+.bottom-nva li a:hover{
+	color: #ff6700;
+}
+
+.bottom-nva li i.iconfont {
+	font-size: 24px;
+	margin-right: 5px;
+}
+
+.footer-links {
+	padding-top: 40px;
+	
+}
+
+.footer-links a {
+	color: #757575;
+}
+
+.footer-links>dl {
+	float: left;
+	width: 160px;
+}
+
+.footer-links>dl>dt {
+	margin-bottom: 26px;
+}
+
+.footer-links>dl>dd {
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.footer-links>dl>dd a:hover {
+	color: #ff6700;
+}
+.col-contact{
+	text-align: center;
+	display: inline-block;
+	border-left:1px solid rgba(0,0,0,0.1) ;
+	padding-left: 45px;
+	margin-left: 10px;
+	
+}
+
+.col-contact>p:first-child{
+	font-size: 21px;
+	color: #ff6700;
+}
+.col-contact>p:nth-of-type(2) {
+	margin: 7px 0px;
+	font-size: 12px;
+}
+
+.col-contact>a {
+	font-size: 14px;
+	border: 1px solid #ff6700;
+	background: #fff;
+	color: #ff6700;
+	padding: 2px 25px;
+}
+.follow{
+	font-size: 12px;
+	line-height: 40px;
+}
+.follow>img{
+	width: 20px;
+	vertical-align: middle;
+}
+
+
+
+/* ---<!-- 站点信息 -->---- */
+.site-info {
+	padding-top: 20px;
+	background: #fafafa;
+	margin-top: 20px;
+	
+}
+.site-info>.container{
+	position: relative;
+	line-height: 20px;
+}
+.site-info>div {
+	padding-left: 60px;
+	box-sizing: border-box;
+}
+
+.sites a {
+	color: #757575;
+	font-size: 12px;
+}
+.sites>.sep{
+	color: rgba(0,0,0,0.3);
+}
+.sites1 a,
+.sites1 {
+	color: #c2c2c2;
+	font-size: 12px;
+}
+
+.site-info .logo {
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+    background: url(//s02.mifile.cn/assets/static/image/logo-mi2.png);
+    background-size: 56px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info-links img {
+	height: 28px;
+}
+/* slogan标语 */
+.slogan{
+	text-align: center;
+	color: gainsboro;
+	margin: 20px 0px;
+}
