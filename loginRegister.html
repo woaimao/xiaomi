@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>login/register</title>
+		<link rel="stylesheet" type="text/css" href="./css/loginRegister.css" />
+		<link rel="stylesheet" type="text/css" href="./font_icon/iconfont.css" />
+		<link rel="shortcut icon" href="https://s02.mifile.cn/assets/static/image/logo-mi2.png">
+	</head>
+	<body>
+		<!-- 左侧背景图片 -->
+		<div class="box-left fl">
+		</div>
+		<!-- 右侧内容区域 -->
+		<div class="box-right">
+			<div class="header clearfix">
+				<div class="header-logo">
+					<a href="./index.html">
+						<img src="img/main-pick/logo-mi2.png" width="40px" alt="小米logo">
+					</a>
+					<span>小米帐号</span>
+
+				</div>
+				<div class="header-nav fr">
+					<ul>
+						<li>
+							<a href="javascript: void(0);">
+								<span>用户协议</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript: void(0);">
+								<span>隐私政策</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript: void(0);">
+								<span>帮助中心</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript: void(0);">
+								<span>用户协议</span>
+							</a>
+						</li>
+						<li>
+							<span style="opacity: 0.3;">
+								|
+							</span>
+						</li>
+						<li>
+							<div class="box-item-list">
+								<a href="javascript: void(0);">
+									<span>中文(简体)</span>
+									<span class="rotate">▲</span>‎
+								</a>
+								<div class="item-list">
+									<ul>
+										<li>
+											<a href="javascript: void(0);">
+												<span>‎‎中文(繁體)‎</span>
+											</a>
+
+										</li>
+										<li>
+											<a href="javascript: void(0);">
+												<span>English</span>
+											</a>
+
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /*登陆注册切换页  */ -->
+			<div class="box-form-layout">
+				<div class="form-layout">
+					<!-- 三角二维码图标 -->
+					<div class="triangle-code">
+						<span class="icon ">
+						
+						</span>
+						<!-- <span class="txt1">扫码登录</span>
+						<span class="txt2">密码登录</span> -->
+					</div>
+
+					<div class="box-form">
+						<!-- login/* 登录内容模块 */ -->
+						<div class="box-title clearfix">
+							<div class=" fl">
+								<a href="javascript: void(0);">
+									<span class="login-title">登录</span>
+								</a>
+								<div class="yellow-block1"></div>
+							</div>
+							<div class="fl">
+								<a href="javascript: void(0);">
+									<span class="register-title">注册</span>
+								</a>
+								<div class="yellow-block2"></div>
+							</div>
+
+						</div>
+						<div class="login">
+							<form action="" method="post">
+								<div class="text-input-box">
+									<label class="" for="text-input">邮箱/手机号/小米ID</label>
+									<input class="loginTxt" type="text" name="" id="text-input" />
+									<p class="tips">请输入账号</p>
+								</div>
+								<div class="password-box">
+									<label class="" for="password">密码</label>
+									<input class="loginPass" type="password" name="" id="password" />
+									<!-- 眼睛icon -->
+									<span class="icon-eye"></span>
+									<p class="tips">请输入登录密码</p>
+								</div>
+								<input type="button" value="登录" id="loginbtn">
+								<div class="forget-password clearfix">
+									<span>忘记密码？</span>
+									<span class="fr">手机号登录</span>
+								</div>
+								<div class="other-login">
+									<span>其他方式登录</span>
+								</div>
+								<!-- 登录图标 -->
+								<div class="icon">
+									<a href="javascript:void(0);">
+										<span class="iconfont icon-QQ"></span>
+									</a>
+									<a href="javascript:void(0);">
+										<span class="iconfont icon-weixin2"></span>
+									</a>
+									<a href="javascript:void(0);">
+										<span class="iconfont icon-zhifubao"></span>
+									</a>
+									
+									<a href="javascript:void(0);">
+										<span class="iconfont icon-weibo"></span>
+									</a>
+								</div>
+							</form>
+						</div>
+						<!-- register/* 注册内容模块 */ -->
+
+						<div class="register display-none">
+							<form action="" method="post">
+								<div class="">
+									<input type="text" name="" id="" placeholder="国家/地区" />
+									<!-- <select name="">
+											<option value="">中国 +86</option>
+											<option value="">马来西亚 +355</option>
+											<option value="">韩国 +1</option>
+										</select> -->
+									<p id="" class="tips">请输入账号</p>
+								</div>
+								<div class="">
+									<input class="registerTxt" type="text" name="" id="regPhone" placeholder="手机号" />
+									<p class="tips">请输入手机号码</p>
+								</div>
+								<div class="">
+									<input class="registerTxt" type="text" name="" id="regVerify" placeholder="短信验证码" />
+									<p class="tips">请输入短信验证码</p>
+								</div>
+								<input class="registerPass" type="button" value="注册" onclick="registerBtn()">
+								<div class="forget-password clearfix">
+									<span>收不到验证码？</span>
+								</div>
+								<!-- agreement协议 -->
+								<div class="agreement">
+									<input type="checkbox" name="" id="" value="" />
+									<span>
+										已阅读并同意小米帐号
+										<a href="javascript:void(0);">用户协议</a>
+										和
+										<a href="javascript:void(0);">隐私政策</a>
+									</span>
+								</div>
+								<div class="other-login">
+									<span>其他方式登录</span>
+								</div>
+								<div class="icon">
+									<a href="javascript:void(0);">
+										<span class="iconfont icon-QQ"></span>
+									</a>
+									<a href="javascript:void(0);">
+										<span class="iconfont icon-weibo"></span>
+									</a>
+									<a href="javascript:void(0);">
+										<span class="iconfont icon-zhifubao"></span>
+										<a href="javascript:void(0);">
+											<span class="iconfont icon-weixin2"></span>
+										</a>
+								</div>
+							</form>
+						</div>
+						<div class="box-QR-code">
+							<h4 align="center">扫码登录 安全快捷</h4>
+							<div class="other-login">
+								<img src="img/main-pick/QR-code.png">
+							</div>
+							<div>
+								<span class="small-font">请使用小米手机/米家等小米旗下APP扫码登录</span>
+							</div>
+
+							<div class="other-login">
+								<span class="app-title">支持扫码登陆的</span>
+								<span>App</span>
+							</div>
+							<div class="icon">
+								<a href="javascript:void(0);">
+									<span class="iconfont icon-QQ"></span>
+								</a>
+								<a href="javascript:void(0);">
+									<span class="iconfont icon-zhifubao"></span>
+									<a href="javascript:void(0);">
+										<span class="iconfont icon-weixin2"></span>
+									</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="copyright">
+				小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号
+			</div>
+		</div>
+
+		<script src="./js/loginRegister.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>填写订单信息</title>
+		<link rel="stylesheet" type="text/css" href="./css/confirmOrder.css"/>
+		<link rel="stylesheet" type="text/css" href="./font_icon/iconfont.css"/>
+		<link rel="shortcut icon" href="https://s02.mifile.cn/assets/static/image/logo-mi2.png">
+	</head>
+	<body>
+		<!-- 头部header -->
+		<div class="header bor">
+			<div class="container">
+				<div class="header-logo">
+					<a href="index.html">
+						<img src="img/main-pick/logo-mi2.png" width="48px" alt="小米logo">
+					</a>
+				</div>
+				<div class="header-title">
+					<h2>确认订单</h2>
+				</div>
+				<div class="site-topbar fr">
+					<div class="topbar-info">
+						<div class="user">
+							<a class="username" href="javascript:void(0);">
+								<span style="">登录</span>
+								<span class="icon"></span>
+							</a>
+							<div class="user-menu-box">
+								<ul class="user-menu">
+									<li>
+										<a href="javascript:void(0);">个人中心</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">评价晒单</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">我的喜欢</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">小米账户</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">退出登录</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<span class="vertical-line">|</span>
+						<a class="link-order" href="javascript:void(0);" target="_blank">我的订单</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- 主页面 -->
+		<div class="page-main">
+			<div class="container">
+				<!-- address-detail地址详情 -->
+				<div class="address-detail">
+					<div class="address-header">
+						<span class="header-title">收货地址</span>
+						<div class="header-desc">
+							<span class="vertical-line">|</span>
+							<!-- <span class="header-desc">大型商品下单后，收货地址将无法修改。</span>
+							<span>快递公司会电话联系您确认送货时间，收货时需核对身份证信息。</span> -->
+						</div>
+						
+					</div>
+					<!-- address-box地址-->
+					<div class="address-box">
+						<!-- 弹出框 -->
+						<div id="shadowBtn" class="popup-box">
+							<div class="address-add">
+									<div class="title clearfix">
+										<span>添加收货地址</span>
+										<span class="fr" onclick="CloseBtn()">×</span>
+									</div>
+									
+									<form action="#" method="#">
+										<div class="addr-itembox">
+											<div class="box clearfix" >
+												<div class="item">
+													<label class="input-label " for="Name">姓名</label>
+													<input id="Name" type="text"/>
+												</div>
+												<div class="item fr">
+													<label class="input-label" for="Phone">手机号</label>
+													<input id="Phone" type="text" />
+												</div>
+											</div>
+											
+											<div class="item">
+												<label class="input-label" for="Addr">选择省 / 市 / 区 / 街道</label>
+												<input id="Addr" type="text" />
+											</div>
+											
+											<div class="item">
+												<!-- rows排 cols列数-->
+												<label class="input-label " for="detailedAddr">详细地址</label>
+												<textarea id="detailedAddr" rows="" cols=""></textarea>
+											</div>
+											<div class="item">
+												<label class="input-label" for="addrLabel">地址标签</label>
+												<input id="addrLabel" type="text" />
+											</div>
+											<!-- 表单内的<button>未指定类型时，默认的类型为submit，可以显式的修改为<button type="button">来阻止表单提交 -->
+											<div class="addr-footer">
+												<button type="button" class="AddrBtn btn btn-primary">确定</button>
+												<button type="button" class="btn btn-gray">取消</button>
+											</div>
+										</div>
+									</form>
+								
+							</div>
+						</div>
+						<div class="address-list" onclick="shadow()">
+							<div class="add-desc">
+								<div>+</div>
+								<p>添加地址</p>
+							</div>
+						</div>
+						<div class="bor-color address-list">
+							<div class="address-info">
+								<div class="name">
+									<span>
+										名字
+									</span>
+									<span style="color: rgb(117, 117, 117);">
+										标签
+									</span>
+								</div>
+								<div class="tel">
+									手机号码
+								</div>
+								<div class="address-con">
+									<span>撒撒</span>
+									<p class="info">
+										水水水水水水水水水水水四
+									</p>
+								</div>
+								<div class="address-action">
+									<span class="editAddr">修改</span>
+									<span class="addrDelBtn">删除</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- detail-section详情项 -->
+				<div class="detail-section">
+					<div class="detail-header">
+						<span class="header-title">商品及优惠券</span>
+						<div class="options-list">
+							<span class="options-item"></span>
+						</div>
+					</div>
+					<!-- goods-list货物清单 -->
+					<div class="goods-list">
+						<div>
+							<!-- goods-item商品项目 -->
+							<div class="goods-img">
+								<img data-v-73ddf45a="" src="//cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1628162325.8517261.jpg?thumb=1&amp;">
+							</div>
+							<!-- goods-desc商品描述-->
+							<div class="goods-desc">
+								<a href="javascript:void(0);">
+									<span>小米电视6 55”OLED 黑色 55英寸</span>
+								</a>
+							</div>
+							<!--price-box价格盒子  -->
+							<div class="price-box fr">
+								<div class="item-desc good-price">
+									<span>2000</span>元&nbsp;x
+									<span class="txt">2</span>
+								</div>
+								<div class="item-desc good-status"></div>
+								<!-- 总计 -->
+								<div class="item-desc good-total">
+									<span>4000</span>元
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- detail-section详情项 -->
+				<div class="detail-section">
+					<div class="detail-header">
+						<span class="header-title">配送方式</span>
+						<div class="options-list">
+							<span class="options-item">包邮</span>
+						</div>
+					</div>
+				</div>
+				<!-- detail-section详情项 -->
+				<div class="detail-section">
+					<div class="detail-header">
+						<span class="header-title">发票</span>
+						<div class="options-list">
+							<span class="options-item">电子普通发票</span>
+							<span class="options-item">个人</span>
+							<span class="options-item">商品明细</span>
+							<span class="options-item">修改></span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<!-- 购物车内容条cart-bar-->
+			<div class="container">
+				<div class="cart-bar clearfix">
+					<div class="fr">
+						<div class="btn btn-return">
+							<a href="./ShoppingCart.html">
+								返回购物车
+							</a>
+						</div>
+						
+						<a class="btn btn-settlement" href="./personal/personal-myOrder.html">
+							去结算
+						</a>
+						
+						
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<!-- site-footer网站页脚 -->
+		<div class="site-footer">
+			<div class="container">
+				<div class="bottom-nva">
+					<div class="container">
+						<ul class="clearfix">
+							<li class="Line"><a href=""><i class="iconfont icon-weixiu"></i>预约维修服务</a></li>
+							<li class="Line"><a href=""><i class="iconfont icon-jinqiridingdan"></i>7天无理由退货</a></li>
+							<li class="Line"><a href=""><i class="iconfont icon-shouye-shiwutiantuihuo"></i>15天免费换货</a></li>
+							<li class="Line"><a href=""><i class="iconfont icon-lihe1"></i>满69包邮</a></li>
+							<li><a href=""><i class="iconfont icon-dizhi"></i>520余家售后网点</a></li>
+						</ul>
+						
+						<div class="footer-links clearfix">
+							<dl class="col-links col-links-first">
+								<dt>帮助中心</dt>
+								<dd><a rel="nofollow" href="" target="_blank">账户管理</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">购物指南</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">订单操作</a>
+								</dd>
+							</dl>
+							<dl class="col-links ">
+								<dt>服务支持</dt>
+								<dd><a rel="nofollow" href="" target="_blank">售后政策</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">自助服务</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">相关下载</a>
+								</dd>
+							</dl>
+							<dl class="col-links ">
+								<dt>线下门店</dt>
+								<dd><a rel="nofollow" href="" target="_blank">小米之家</a>
+								</dd>
+								<dd><a rel="nofollow" href="" target="_blank">服务网点</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">授权体验店</a></dd>
+							</dl>
+							<dl class="col-links ">
+								<dt>关于小米</dt>
+								<dd><a rel="nofollow" href="" target="_blank">了解小米</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">加入小米</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">投资者关系</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">企业社会责任</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">廉洁举报</a></dd>
+							</dl>
+							<dl class="col-links ">
+								<dt>关注我们</dt>
+								<dd><a rel="nofollow" href="" target="_blank">新浪微博</a></dd>
+								<dd><a rel="nofollow" href="" id="J_siteWeixinCode">官方微信</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">联系我们</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">公益基金会</a>
+								</dd>
+							</dl>
+							<dl class="col-links ">
+								<dt>特色服务</dt>
+								<dd><a rel="nofollow" href="" target="_blank">F 码通道</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">礼物码</a></dd>
+								<dd><a rel="nofollow" href="" target="_blank">防伪查询</a></dd>
+							</dl>
+							<div class="col-contact">
+								<p class="phone">400-100-5678</p>
+								<p>8:00-18:00（仅收市话费）</p>
+								<a rel="nofollow">
+								<em class="iconfont icon-touxiang"></em> 人工客服 </a>
+								<div class="follow">关注小米：
+									<img src="https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/global/wb.png" >
+									<img src="https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/global/wx.png" >
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 站点信息 -->
+		<div class="site-info">
+			<div class="container">
+				<div class="logo"></div>
+				<div class="info-text">
+					<p class="sites"><a rel="nofollow" href="//www.mi.com/index.html" target="_blank">小米商城</a>
+						<span class="sep">|</span> <a rel="nofollow" href="//www.miui.com/" target="_blank">MIUI</a>
+						<span class="sep">|</span>
+						<a rel="nofollow" href="//home.mi.com/index.html" target="_blank">米家</a> <span
+							class="sep">|</span> <a rel="nofollow" href="http://www.miliao.com/" target="_blank">米聊</a>
+						<span class="sep">|</span> <a rel="nofollow" href="//www.duokan.com/" target="_blank">多看</a>
+						<span class="sep">|</span>
+						<a rel="nofollow" href="//game.xiaomi.com/" target="_blank">游戏</a> <span class="sep">|</span> <a
+							rel="nofollow" href="//b.mi.com/?client_id=180100031058&amp;masid=17409.0358"
+							target="_blank">政企服务</a> <span class="sep">|</span> <a rel="nofollow"
+							href="//xiaomi.tmall.com/" target="_blank">小米天猫店</a> <span class="sep">|</span> <a
+							rel="nofollow" href="//privacy.mi.com/all/zh_CN/" target="_blank">小米集团隐私政策</a> <span
+							class="sep">|</span> <a rel="nofollow"
+							href="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/f516fe9e2c01.html"
+							target="_blank">小米公司儿童信息保护规则</a> <span class="sep">|</span> <a rel="nofollow"
+							href="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/ded8d0e4a77d.html" target="_blank">小米商城隐私政策</a>
+						<span class="sep">|</span> <a rel="nofollow" href="//www.mi.com/about/user-agreement/"
+							target="_blank">小米商城用户协议</a> <span class="sep">|</span> <a rel="nofollow"
+							href="//static.mi.com/feedback/" target="_blank">问题反馈</a> <span class="sep">|</span> <a
+							rel="nofollow" href="javascript:void(0);" class="J_siteGlobalRegion">Select Location</a>
+					</p>
+					<p class="sites"><a rel="nofollow" href="http://www.mi.com/beihu" target="_blank">北京互联网法院法律服务工作站</a>
+						<span class="sep">|</span> <a rel="nofollow" href="http://www.cca.org.cn/"
+							target="_blank">中国消费者协会</a>
+						<span class="sep">|</span> <a rel="nofollow" href="http://www.bj315.org/"
+							target="_blank">北京市消费者协会</a>
+					</p>
+					<p class="sites1">
+						©
+						<a href="javascript:;" target="_blank" title="mi.com">mi.com</a> 京ICP证110507号
+						<a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">京ICP备10046444号</a> <a
+							rel="nofollow"
+							href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134"
+							target="_blank">京公网安备11010802020134号</a> <a href="//www.mi.com/culture-license/"
+							target="_blank">京网文[2020]0276-042号</a>
+						<br> <a href="//www.mi.com/medical/record/" target="_blank">（京）网械平台备字（2018）第00005号</a>
+						<a href="//www.mi.com/medical/qualification/" target="_blank">互联网药品信息服务资格证
+							(京)-非经营性-2014-0090</a> <a href="//www.mi.com/business-license/" target="_blank">营业执照</a> <a
+							href="//www.mi.com/medical/list/" target="_blank">医疗器械质量公告</a> <br> <a
+							href="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e0c7d4cf3b7cd88de10196e30c92e020.png"
+							target="_blank">增值电信业务许可证</a>&nbsp;网络食品经营备案 京食药网食备202010048 &nbsp;
+						<a href="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c6859168166651511897f54fa1047fe3.png"
+							target="_blank">食品经营许可证</a> <br>
+						违法和不良信息举报电话：171-5104-4404&nbsp;<a href="https://www.mi.com/intellectual"
+							target="_blank">知识产权侵权投诉</a>&nbsp;本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+					</p>
+				</div>
+				<div class="info-links"><a rel="nofollow"
+					href="//privacy.truste.com/privacy-seal/validation?rid=4fc28a8c-6822-4980-9c4b-9fdc69b94eb8&amp;lang=zh-cn"
+					target="_blank"><img rel="nofollow" src="//i1.mifile.cn/f/i/17/site/truste.png"
+						alt="TRUSTe Privacy Certification"></a> <a rel="nofollow"
+					href="//search.szfw.org/cert/l/CX20120926001783002010" target="_blank"><img rel="nofollow"
+						src="//s01.mifile.cn/i/v-logo-2.png" alt="诚信网站"></a> <a
+					id="_xinchacharenzheng_cert_vip_kexinweb" rel="nofollow"
+					href="//xyt.xinchacha.com/pcinfo?sn=523009637759455232&amp;certType=6" target="_blank"><img
+						rel="nofollow" src="//xyt.xinchacha.com/img/icon/icon3.png" alt="可信网站"></a> <a
+					rel="nofollow" href="//www.mi.com/service/buy/commitment/" target="_blank"><img rel="nofollow"
+						src="//i8.mifile.cn/b2c-mimall-media/ba10428a4f9495ac310fd0b5e0cf8370.png"
+						alt="诚信经营 放心消费"></a><a rel="nofollow"
+					href="https://webcert.cnmstl.net/cert/grade?sn=3af21034e35011eab3ea00163e068ceb"
+					class="safe-auth J_safeAuth                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              active"><img
+					rel="nofollow"
+					src="https://cnbj1.fds.api.xiaomi.com/b2c-misite-activity/f1ee261b96ae71e845efba398efeca02.png"
+					class="img1"><img rel="nofollow"
+					src="https://cnbj1.fds.api.xiaomi.com/b2c-misite-activity/61d174e7b862958c2b5becd9b9d07e51.png"
+					class="img2"></a></div>
+				</div>
+			<div class="slogan ir">让全球每个人都能享受科技带来的美好生活</div>
+		</div>
+		<script src="./js/cooke.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/confirmOrder.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/personal/personal-receivingAddress.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+	</body>
+</html>
