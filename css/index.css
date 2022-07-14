@@ -346,7 +346,7 @@ li.nav-item .item-content ul{
 	background: url(../img/banner/banner2.webp);
 	background-repeat: no-repeat;
 	background-size: cover;/* 此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。 */
-	/* background-position: right center; */
+	background-position: right center;
 	
 }
 
@@ -354,19 +354,19 @@ li.nav-item .item-content ul{
 	background: url(../img/banner/banner1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;/* 此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。 */
-	/* background-position: right center; */
+	background-position: right center;
 }
 .banner2{
 	background: url(../img/banner/banner4.webp);
 	background-repeat: no-repeat;
 	background-size: cover;/* 此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。 */
-	/* background-position: right center; */
+	background-position: right center;
 }
 .banner3{
 	background: url(../img/banner/banner5.webp);
 	background-repeat: no-repeat;
 	background-size: cover;/* 此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。 */
-	/* background-position: right center; */
+	background-position: right center;
 }
 
 /* 设置banner左右切换按钮 */
